@@ -44,13 +44,3 @@ if uploadbool == False:
     client.remove_object("raspberrypi5servocontrollerreyansh", "servoMOVE")
         
 
-objects = client.list_objects("raspberrypi5servocontrollerreyansh", recursive=True)
-
-print(f"\nFile names in bucket:")
-found_objects = False
-for obj in objects:
-    print(f"  - {obj.object_name}") # Only printing the object name now
-    found_objects = True
-
-if not found_objects:
-    print(f"  No files found in bucket.")
